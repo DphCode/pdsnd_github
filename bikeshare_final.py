@@ -21,7 +21,7 @@ def get_filters():
     print('Would you like to see information for Chicago, New York or Washington?')
     city = input()
     while city.lower() not in CITY_DATA:
-        print('Please enter a valid city')
+        print('Please enter a valid city (Chicago, New York or Washington)')
         city = input()
 
     print('Enter the month you want to receive information (All, january, february, ... , june)')
