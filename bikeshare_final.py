@@ -6,7 +6,9 @@ pd.set_option('display.max_columns',200)
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
-              'washington': 'washington.csv' }            
+              'washington': 'washington.csv' } 
+
+VALID_MONTHS = ('all', 'january', 'february', 'march', 'april', 'may', 'june')                         
 
 def get_filters():
     """
@@ -25,10 +27,12 @@ def get_filters():
         city = input().lower()
 
     print('Enter the month you want to receive information (All, january, february, ... , june)')
-    month = input()
-    month = month.lower()
+    month = input().lower()
+    while month not in VALID_MONTHS:
+        print('Please enter a valid month')
+        month = input().lower()
     print('Enter the day of week you want to receive information (All, monday, tuesday, ... , sunday...)')
-    day = input()
+    day = input().lower()
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
