@@ -19,13 +19,14 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     print('Would you like to see information for Chicago, New York or Washington?')
-    city = input()
-    while city.lower() not in CITY_DATA:
+    city = input().lower()
+    while city not in CITY_DATA:
         print('Please enter a valid city')
-        city = input()
+        city = input().lower()
 
     print('Enter the month you want to receive information (All, january, february, ... , june)')
     month = input()
+    month = month.lower()
     print('Enter the day of week you want to receive information (All, monday, tuesday, ... , sunday...)')
     day = input()
 
