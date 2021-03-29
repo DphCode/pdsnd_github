@@ -6,6 +6,7 @@ Bikeshare
 
 ### Description
 Explore and understand U.S. bikeshare data.
+You need to install Python, Anaconda and Git Bash.
 
 ### Files used
 chicago.csv
